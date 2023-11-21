@@ -5,7 +5,7 @@ function CourseRoutes(app) {
       const course = Database.courses.find((c) => c._id.$oid === id);
         if (!course) {
         res.status(404).send("Course not found");
-        return;
+          return;
         }
         res.send(course);
     });
